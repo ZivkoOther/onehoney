@@ -8,10 +8,14 @@
 <body>
   <h1>Why are you gay?</h1>
   <button id="ricky" type="button">"Who said I am gay?"</button>
-  <video src="https://www.youtube.com/watch?v=dQw4w9WgXcQ"></video>
+  <video id="vidplayer"></video>
   <script>
-    const rickyboy = document.getElementById('ricky')
-    rickyboy.
+    const rickyboy = document.getElementById('ricky');
+    const player = document.getElementById('vidplayer');
+    rickyboy.addEventListener('click', function()  {
+      player.src = "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+      player.play();
+    });
   </script>
 </body>
 </html>
