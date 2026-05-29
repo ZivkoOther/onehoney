@@ -7,14 +7,29 @@
 </head>
 <body>
   <h1>Why are you gay?</h1>
-  <button id="ricky" type="button">"Who said I am gay?"</button>
-  <video id="vidplayer"></video>
+
+  <button id="ricky" type="button">
+    "Who said I am gay?"
+  </button>
+
+  <div id="player"></div>
+
   <script>
     const rickyboy = document.getElementById('ricky');
-    const player = document.getElementById('vidplayer');
-    rickyboy.addEventListener('click', function()  {
-      player.src = "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
-      player.play();
+    const player = document.getElementById('player');
+
+    rickyboy.addEventListener('click', function () {
+      player.innerHTML = `
+        <iframe
+          width="560"
+          height="315"
+          src="https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1"
+          title="YouTube video player"
+          frameborder="0"
+          allow="autoplay; encrypted-media"
+          allowfullscreen>
+        </iframe>
+      `;
     });
   </script>
 </body>
